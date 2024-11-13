@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace KingdomOfAlgorithmia.Day1
+namespace KingdomOfAlgorithmia
 {
     public static class Day1
     {
@@ -60,15 +55,7 @@ namespace KingdomOfAlgorithmia.Day1
                 result += legend[c];
                 enemyCount++;
             }
-            if (enemyCount == 2)
-            {
-                result += 2;
-            }
-            else if (enemyCount == 3)
-            {
-                result += 6;
-            }
-            return result;
+            return result + enemyCount == 2 ? 2 : 6;
         }
         
         private static readonly Dictionary<char, int> legend = new Dictionary<char, int>

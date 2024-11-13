@@ -1,10 +1,10 @@
 ﻿namespace KingdomOfAlgorithmia
 {
-  class Program()
-  {
-    public static void Main()
+    class Program
     {
-      Day1.Solve();
+        public static void Main()
+        {
+            Day1.Solve();
+        }
     }
-  }
 }
