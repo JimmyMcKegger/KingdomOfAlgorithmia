@@ -48,14 +48,23 @@ namespace KingdomOfAlgorithmia
 
             foreach (char c in chars)
             {
-                if (c == 'x')
+                if (c != 'x')
                 {
-                    continue;
+                    enemyCount++;
+                    result += legend[c];
                 }
-                result += legend[c];
-                enemyCount++;
             }
-            return result + enemyCount == 2 ? 2 : 6;
+
+            switch (enemyCount)
+            {
+                case 2:
+                    result += 2;
+                    break;
+                case 3:
+                    result += 6;
+                    break;
+            }
+            return result;
         }
         
         private static readonly Dictionary<char, int> legend = new Dictionary<char, int>
